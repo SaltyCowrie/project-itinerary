@@ -11,21 +11,30 @@ Itinerary.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    iteneraryName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+    goalOne: {
+      type: DataTypes.STRING,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
+    goalTwo: {
+      type: DataTypes.STRING,
+    },
+    goalThree: {
+      type: DataTypes.STRING,
+    },
+    goalFour: {
+      type: DataTypes.STRING,
+    },
+    goalFive: {
+      type: DataTypes.STRING,
+    },
+    goalSix: {
+      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,
