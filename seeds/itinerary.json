@@ -1,39 +1,51 @@
 [
-  
+  //id1
   {
     "itinerary_name": "Workout",
     "description": "Workout Goals",
     "user_id": 1
   
   },
+  //id2
   {
     "itinerary_name": "vacation",
     "description": "lets go on a cruise",
     "user_id": 2
   
   },
+  //id3
   {
     "itinerary_name": "learn",
     "description": "read a book",
     "user_id": 3
   
   },
+  //id4
   {
     "itinerary_name": "smile",
     "description": "listen to a comedian",
     "user_id": 4
   
   },
+  //id5
   {
     "itinerary_name": "travel",
     "description": "pack",
     "user_id": 1
   
   },
+  //id6
   {
     "itinerary_name": "school",
     "description": "study",
     "user_id": 3
+  
+  },
+  //id7
+  {
+    "itinerary_name": "School Play",
+    "description": "Things need for the play",
+    "user_id": 4
   
   }
   

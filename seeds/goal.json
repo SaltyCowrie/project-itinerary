@@ -1,32 +1,46 @@
 [
   
   {
-    "goal": "Test",
+    "goal": "Do pushups",
+    "itinerary_id": 1
+  
+  },
+
+  {
+    "goal": "Run 3 miles",
     "itinerary_id": 1
   
   },
   {
-    "goal": "go to europe",
+    "goal": "Buy new suitcase",
     "itinerary_id": 2
   
-  }
-  {
-    "goal": "read a few chapters",
-    "itinerary_id": 3
-  
-  }
+  },
   {
     "goal": "google some jokes",
     "itinerary_id": 4
   
-  }
+  },
   {
     "goal": "go for a jog",
     "itinerary_id": 1
   
+  },
+  {
+    "goal": "Buy new suitcase",
+    "itinerary_id": 6
+  
+  },
+  {
+    "goal": "google some jokes",
+    "itinerary_id": 6
+  
+  },
+  {
+    "goal": "go for a jog",
+    "itinerary_id": 6
+  
   }
-  
-  
 
 
 
