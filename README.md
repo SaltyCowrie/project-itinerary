@@ -1,19 +1,13 @@
 # project-itinerary
-Creating a group project focused on creating a personal day-to-day itinerary
-
-## Links
-
-## Screenshot
+Creating a group project focused on creating a personal day-to-day itinerary.
 
 ## Credit
 
 Jonathan - 
 
-Cristian - 
+Christian - 
 
 Tristan - 
-
-Michael - 
 
 ## License 
 
