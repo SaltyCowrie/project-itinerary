@@ -35,4 +35,37 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get('/', async (req, res) => {
+  // find all categories
+  // be sure to include its associated Products
+  try {
+    const allItinerary = await Itinerary.findAll({
+      include:[Product]
+    })
+    res.status(200).json(allItinerary)
+    
+  } catch (error) {
+    console.error(error)
+    res.status(500).json(error)
+  }
+});
+
+router.get('/:id',async (req, res) => {
+  // find one category by its `id` value
+  // be sure to include its associated Products
+  try {
+    const oneitinerary = await Category.findOne({
+      where:{
+        id:req.params.id
+      },
+      include:[Product]
+
+
+    })
+    res.status(200).json(onecategory)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json(error)
+  }
+});
 module.exports = router;
