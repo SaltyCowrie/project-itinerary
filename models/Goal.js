@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Itinerary extends Model {}
+class Goal extends Model {}
 
-Itinerary.init(
+Goal.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,17 +11,15 @@ Itinerary.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    itinerary_name: {
+    goal: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
-    },
-    user_id: {
+
+    itinerary_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'itinerary',
         key: 'id',
       },
     },
@@ -31,8 +29,8 @@ Itinerary.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'itinerary',
+    modelName: 'goal',
   }
 );
 
-module.exports = Itinerary;
+module.exports = Goal;

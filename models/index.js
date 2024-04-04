@@ -1,13 +1,15 @@
 const User = require('./User');
 const Itinerary = require('./Itinerary');
+const Goal = require("./Goal")
 
 User.hasMany(Itinerary, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Itinerary.belongsTo(User, {
-  foreignKey: 'user_id'
+Itinerary.hasMany(Goal, {
+  foreignKey: 'itinerary_id',
+  onDelete: 'CASCADE'
 });
 
-module.exports = { User, Itinerary };
+module.exports = { User, Itinerary, Goal };
