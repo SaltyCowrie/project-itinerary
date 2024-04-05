@@ -19,8 +19,15 @@ Goal.init(
     itinerary_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'itinerary',
-        key: 'id',
+        model: "itinerary",
+        key: "id",
+      },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
       },
     },
   },
@@ -29,7 +36,7 @@ Goal.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'goal',
+    modelName: "goal",
   }
 );
 
