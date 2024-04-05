@@ -1,14 +1,33 @@
 [
   
   {
-    "goal": "Do pushups",
+    "goal": "Do 30 pushups",
     "itinerary_id": 1
   
   },
-
   {
-    "goal": "Run 3 miles",
+    "goal": "Run a mile",
     "itinerary_id": 1
+  
+  },
+  {
+    "goal": "Go for a jog",
+    "itinerary_id": 1
+  
+  },
+  {
+    "goal": "Go to the gym",
+    "itinerary_id": 1
+  
+  },
+  {
+    "goal": "Hike on a nature trail",
+    "itinerary_id": 2
+  
+  },
+  {
+    "goal": "Visit the beach",
+    "itinerary_id": 2
   
   },
   {
@@ -17,33 +36,59 @@
   
   },
   {
-    "goal": "google some jokes",
+    "goal": "Research some cools topics",
+    "itinerary_id": 3
+  
+  },
+  {
+    "goal": "Watch a documentary",
+    "itinerary_id": 3
+  
+  },
+  {
+    "goal": "Visit a museum or historical site",
+    "itinerary_id": 3
+  
+  },
+  {
+    "goal": "Google some jokes",
     "itinerary_id": 4
   
   },
   {
-    "goal": "go for a jog",
-    "itinerary_id": 1
+    "goal": "Watch a movie",
+    "itinerary_id": 4
   
   },
   {
-    "goal": "Buy new suitcase",
+    "goal": "Avoid phone for an hour",
+    "itinerary_id": 5
+  
+  },
+  {
+    "goal": "Take a walk",
+    "itinerary_id": 5
+  
+  },
+  {
+    "goal": "Call a loved one",
+    "itinerary_id": 5
+  
+  },
+  {
+    "goal": "Random act of kindness",
+    "itinerary_id": 5
+  
+  },
+  {
+    "goal": "Use knowledge in a real-world sense",
     "itinerary_id": 6
   
   },
   {
-    "goal": "google some jokes",
-    "itinerary_id": 6
-  
-  },
-  {
-    "goal": "go for a jog",
+    "goal": "Finish work assignments",
     "itinerary_id": 6
   
   }
-
-
-
-
 
 ]
