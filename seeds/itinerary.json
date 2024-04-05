@@ -1,55 +1,45 @@
 [
-  //id1
+
   {
     "itinerary_name": "Workout",
-    "description": "Workout Goals",
+    "description": "Workout goals",
     "user_id": 1
   
   },
-  //id2
+
   {
-    "itinerary_name": "vacation",
-    "description": "lets go on a cruise",
+    "itinerary_name": "Vacation",
+    "description": "Lets travel",
     "user_id": 2
   
   },
-  //id3
+
   {
-    "itinerary_name": "learn",
-    "description": "read a book",
+    "itinerary_name": "Learn",
+    "description": "Reading a book",
     "user_id": 3
   
   },
-  //id4
+
   {
-    "itinerary_name": "smile",
-    "description": "listen to a comedian",
+    "itinerary_name": "Smile",
+    "description": "Create some fun",
     "user_id": 4
   
   },
-  //id5
+  
   {
-    "itinerary_name": "travel",
-    "description": "pack",
-    "user_id": 1
+    "itinerary_name": "Relax",
+    "description": "Find time to breathe",
+    "user_id": 4
   
   },
-  //id6
+
   {
-    "itinerary_name": "school",
-    "description": "study",
+    "itinerary_name": "Study",
+    "description": "Get ahead with education",
     "user_id": 3
-  
-  },
-  //id7
-  {
-    "itinerary_name": "School Play",
-    "description": "Things need for the play",
-    "user_id": 4
   
   }
-  
-
-
 
 ]
