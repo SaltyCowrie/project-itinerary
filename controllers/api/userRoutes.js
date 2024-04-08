@@ -67,10 +67,79 @@ router.get("/:id", async (req, res) => {
 
 
 //create itinerary and assign to user
+
+router.post('/',async (req, res) => {
+  
+  try {
+    const createitinerary = await Itinerary.create(req.body)
+    res.status(200).json(createitinerary)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json(error)
+  }
+});
+
+
 //create goal and add it to the itinerary
+router.post('/',async (req, res) => {
+  
+  try {
+    const creategoal = await Goal.create(req.body)
+    res.status(200).json(creategoal)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json(error)
+  }
+});
+
 //delete a itinerary and all goals "On CASCADE"
+router.delete('/:id',async (req, res) => {
+  
+  try {
+    const deleteitinerary = await Itinerary.destroy({
+      where:{
+        id:req.params.id
+      }
+    })
+    res.status(200).json(deleteitinerary)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json(error)
+  }
+});
+
 //delete a goal
+router.delete('/:id',async (req, res) => {
+  
+  try {
+    const deletegoal = await Goal.destroy({
+      where:{
+        id:req.params.id
+      }
+    })
+    res.status(200).json(deletegoal)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json(error)
+  }
+});
+
+
 //delete a user
+router.delete('/:id',async (req, res) => {
+  
+  try {
+    const deleteuser = await User.destroy({
+      where:{
+        id:req.params.id
+      }
+    })
+    res.status(200).json(deleteuser)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json(error)
+  }
+});
 
 
 
