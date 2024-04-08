@@ -12,9 +12,11 @@ Itinerary.hasMany(Goal, {
   onDelete: 'CASCADE'
 });
 
-// User.hasMany(Goal, {
-//   foreignKey: "user_id",
-//   onDelete: "CASCADE",
-// });
+
+ User.hasMany(Goal, {
+   foreignKey: "user_id",
+   onDelete: "CASCADE",
+ });
+
 
 module.exports = { User, Itinerary, Goal };

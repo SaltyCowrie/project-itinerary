@@ -33,24 +33,38 @@ router.post('/', async (req, res) => {
   }
 });
 
-//Gabe Code Space
+//Get User, their Itinerary and all associated goals
+
+router.get("/:id", async (req, res) => {
+  // find one category by its `id` value
+  // be sure to include its associated Products
+  try {
+    const userFind = await User.findOne({
+      where: {
+        id: req.params.id,
+      }
+
+    });
+
+    const user = userFind.get({ plain: true });
+    console.log(user)
+
+        const itinerary = await Itinerary.findAll({
+          where: {
+            user_id: user.id,
+          },
+          include: [Goal],
+        });
 
 
+    res.status(200).json(itinerary);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json(error);
+  }
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-//Gabe End Code Space
 
 //create itinerary and assign to user
 
