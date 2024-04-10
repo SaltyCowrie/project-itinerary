@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     const projects = itineraryData.map((itinerary) => itinerary.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
+    res.render('itinerary', { 
       projects, 
     
     });
@@ -61,7 +61,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      user,
       logged_in: true
     });
   } catch (err) {
