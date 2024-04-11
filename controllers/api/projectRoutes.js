@@ -67,3 +67,28 @@ router.get('/:id',async (req, res) => {
   }
 });
 module.exports = router;
+
+router.put('/:id', withAuth, async (req, res) => {
+  try {
+    const itineraryData = await Itinerary.update(
+      {
+        completed: req.body.completed,
+      },
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      }
+    );
+
+    if (!itineraryData) {
+      res.status(404).json({ message: 'No itinerary found with this id!' });
+      return;
+    }
+
+    res.status(200).json(itineraryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});

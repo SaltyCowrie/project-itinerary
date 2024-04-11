@@ -14,17 +14,18 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         
-        <a href="/">my Itinerary</a>
+        <a href="/profile">my Itinerary</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> 
-          <a href="/itinerary">profile</a> 
+          {{!-- <a href="/itinerary">profile</a>  --}}
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
+        <button id="dark-mode-toggle">Dark Mode?</button>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
@@ -40,6 +41,20 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
+<!-- Render script for dark mode toggle -->
+  <script>
+    // check for saved darkmode in localstorage
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+
+      // save darkmode setting in localstorage
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    });
+  </script>
 </body>
 
 </html>

@@ -1,5 +1,28 @@
+:root {
+  --border-color: #ccc;
+  --button-color: cornsilk;
+  --hover-color: slategray;
+  --amount-color: #056605;
+  --background-color: white;
+  --text-color: black;
+}
+
 header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-color);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  --border-color: #333;
+  --button-color: #ddd;
+  --hover-color: lightgray;
+  --amount-color: #0a0;
+  --background-color: #222;
+  --text-color: #ddd;
 }
 
 .no-button {
@@ -7,18 +30,31 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: cornsilk;
+  color: var(--button-color);
   text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
-  color: slategray;
+  color: var(--hover-color);
   text-decoration: underline;
 }
 
-.dollar-amount {
+/* .dollar-amount {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
+} */
+
+.itinerary.completed {
+  text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 10ps;
+  }
+  .no-button {
+    font-size: 90%;
+  }
 }

@@ -1,3 +1,65 @@
+const checkboxChangeHandler = async function(event) {
+  event.preventDefault();
+  var itineraryId = event.target.getAttribute('data-id');
+    var isCompleted = event.target.checked;
+
+    // send request to mark itinerary complete to server
+    try {
+      const response = await fetch('/api/projects/' + itineraryId, {
+        method: 'PUT', 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+           completed: true,
+        }),
+      });
+
+      if(response.ok) {
+        if (isCompleted) {
+          event.target.parentElement.classList.add('completed');
+        } else {
+          event.target.parentElement.classList.remove('completed');
+        }
+      } else {
+        console.error('Failed to update itinerary');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+}
+// document.querySelectorAll('.completed-checkbox').forEach(function(checkbox) {
+//   checkbox.addEventListener('change', async function(event) {
+//     var itineraryId = event.target.getAttribute('data-id');
+//     var isCompleted = event.target.checked;
+
+//     // send request to mark itinerary complete to server
+//     try {
+//       const response = await fetch('/api/projects/' + itineraryId, {
+//         method: 'PUT', 
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({
+//            completed: isCompleted,
+//         }),
+//       });
+
+//       if(response.ok) {
+//         if (isCompleted) {
+//           event.target.parentElement.classList.add('completed');
+//         } else {
+//           event.target.parentElement.classList.remove('completed');
+//         }
+//       } else {
+//         console.error('Failed to update itinerary');
+//       }
+//     } catch (error) {
+//       console.error('Error:', error);
+//     }
+//   });
+// });
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -46,5 +108,10 @@ document
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('#delete-btn')
   .addEventListener('click', delButtonHandler);
+
+document
+  .querySelectorAll('.completed-checkbox').forEach((checkbox) => {
+    checkbox.addEventListener('change', checkboxChangeHandler);
+  })
