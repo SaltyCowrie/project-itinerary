@@ -17,6 +17,11 @@ Itinerary.init(
     },
     description: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    completed: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     user_id: {
       type: DataTypes.INTEGER,

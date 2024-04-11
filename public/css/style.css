@@ -46,6 +46,10 @@ body {
   margin-left: -5px;
 } */
 
+.itinerary.completed {
+  text-decoration: line-through;
+}
+
 @media (max-width: 600px) {
   header {
     padding: 10ps;
