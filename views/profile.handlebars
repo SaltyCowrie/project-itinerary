@@ -10,7 +10,7 @@
 
     <form class="form new-project-form">
       <div class="form-group">
-        <label for="project-name">Itinerary name:</label>
+        <label for="project-name">Title:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
       <div class="form-group">
@@ -34,6 +34,7 @@
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{itinerary.id}}">DELETE</button>
+        <input type="checkbox" class="completed-checkbox" data-id="{{itinerary.id}}">
       </div>
     </div>
     {{/each}}
