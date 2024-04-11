@@ -23,16 +23,14 @@
     </form>
   </div>
 
-  {{user.name}}
-
-  {{#if user.itinerary}}
+  {{#if user.itineraries}}
   <div class="col-md-6 project-list">
     <h3>Current Itineraries:</h3>
 
-    {{#each user.itinerary as |itinerary|}}
+    {{#each user.itineraries as |itinerary|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{itinerary.id}}">{{itinerary.name}}</a></h4>
+        <h4><a href="/itinerary/{{itinerary.id}}">{{itinerary.itinerary_name}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{itinerary.id}}">DELETE</button>
