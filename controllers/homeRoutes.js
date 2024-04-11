@@ -30,18 +30,18 @@ router.get('/', async (req, res) => {
 router.get('/itinerary/:id', async (req, res) => {
   try {
     const itineraryData = await Itinerary.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
+      // include: [
+      //   {
+      //     model: Goal,
+      //     include: [all]
+      //   },
+      // ],
     });
 
     const itinerary = itineraryData.get({ plain: true });
 
     res.render('itinerary', {
-      ...itinerary,
+      itinerary,
       logged_in: req.session.logged_in
     });
   } catch (err) {
