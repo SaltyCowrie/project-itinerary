@@ -19,17 +19,17 @@ Goal.init(
     itinerary_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'itinerary',
-        key: 'id',
+        model: "itinerary",
+        key: "id",
       },
-    },
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'goal',
+    modelName: "goal",
   }
 );
 

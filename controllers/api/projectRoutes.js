@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Project, Itinerary} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -39,9 +39,7 @@ router.get('/', async (req, res) => {
   // find all categories
   // be sure to include its associated Products
   try {
-    const allItinerary = await Itinerary.findAll({
-      include:[Product]
-    })
+    const allItinerary = await Itinerary.findAll()
     res.status(200).json(allItinerary)
     
   } catch (error) {
