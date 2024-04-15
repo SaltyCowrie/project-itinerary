@@ -4,42 +4,36 @@
     "itinerary_name": "Workout",
     "description": "Workout goals",
     "user_id": 1
-  
   },
 
   {
     "itinerary_name": "Vacation",
     "description": "Lets travel",
     "user_id": 2
-  
   },
 
   {
     "itinerary_name": "Learn",
     "description": "Reading a book",
     "user_id": 3
-  
   },
 
   {
     "itinerary_name": "Smile",
     "description": "Create some fun",
     "user_id": 4
-  
   },
   
   {
     "itinerary_name": "Relax",
     "description": "Find time to breathe",
     "user_id": 4
-  
   },
 
   {
     "itinerary_name": "Study",
     "description": "Get ahead with education",
     "user_id": 3
-  
   }
 
 ]
